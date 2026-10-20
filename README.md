@@ -1,4 +1,4 @@
-# 01.spring-backend-v1.0
+#i01.spring-backend-v1.0
 
 ## 이 코드는 무엇을 위한 실습인가?
 Spring Boot(JPA + H2)로 만든 **REST API 전용 백엔드**입니다. 사용자(User)·상품(Product)·주문(Order)·결제(Payment)·배송(Delivery) 도메인을 다루며, JPA 연관관계(`@ManyToOne`, `@OneToOne`), 상태 전이(Enum), Actuator/Prometheus를 이용한 Kubernetes 헬스체크·모니터링을 실습합니다.
@@ -50,3 +50,6 @@ kubectl apply -f k8s/service.yaml
 - Service 이름은 반드시 **`backend`** 여야 합니다. `03.frontend`의 nginx 설정이 `http://backend:8080`으로 프록시하도록 고정되어 있기 때문입니다.
 - Service는 `ClusterIP`이므로 클러스터 밖에서는 직접 접근할 수 없습니다. 외부에서 접근하는 진입점(Ingress)은 `03.frontend`에만 있으며, 03.frontend(nginx)가 이 Service(`backend:8080`)로 API 요청을 전달하는 구조입니다.
 - Liveness/Readiness probe는 Actuator의 `/actuator/health/liveness`, `/actuator/health/readiness`를 사용합니다.
+
+## 커밋용
+- 시도해보기
