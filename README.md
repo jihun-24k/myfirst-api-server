@@ -53,3 +53,4 @@ kubectl apply -f k8s/service.yaml
 
 ## 커밋용
 - 시도해보기
+README.md
