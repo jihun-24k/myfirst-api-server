@@ -55,3 +55,4 @@ kubectl apply -f k8s/service.yaml
 - 시도해보기
 README.md
 touch README.md
+touch README.md
